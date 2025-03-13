@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Html5_part2</title>
+</head>
+<body>
+  <p><u>ruby rp rt tag</u></p>
+  <ruby>
+    漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp>
+    </ruby>
+  
+  <p><u>s tag</u></p>
+  <p><s>Only 50 tickets left!</s></p>
+  <p>SOLD OUT!</p>
+
+  <p><u>samp tag</u></p>
+  <p>Message from my computer:</p>
+  <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+  <p><u>script tag</u></p>
+  <p id="demo"></p>
+  <script>
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  </script> 
+
+  <p><u>section tag (more sections)</u></p>
+  <section>
+    <h2>WWF History</h2>
+    <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+  </section>
+  
+  <section>
+    <h2>WWF's Symbol</h2>
+    <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+  </section>
+
+  <p><u>select tag</u></p>
+  <p>The select element is used to create a drop-down list.</p>
+
+  <form action="/action_page.php">
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>Click the "Submit" button and the form-data will be sent to a page on the 
+  server called "action_page.php".</p>
+
+
+  <p><u>small tag</u></p>
+  <p>This is some normal text</p>
+  <p><small>This is some smaller text</small></p>
+
+
+  <p><u>audio and source tag</u></p>
+  <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p><u>span tag</u></p>
+  <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+  <p><u>strong tag</u></p>
+  <p>This text is normal.</p>
+
+  <p><strong>This text is important!</strong></p>
+
+  <p><u>style tag</u></p>
+  <style>
+    h1 {color:red;}
+    p {color:blue;}
+    </style>
+  <h1>This is heading</h1>
+  <p>This is paragraph</p>
+
+
+  <p><u>subscript and superscript tags</u></p>
+  <p>This text contains <sub>subscript</sub> text.</p>
+  <p>This text contains <sup>superscript</sup> text.</p>
+
+
+  <p><u>details and summary tags</u></p>
+  <details>
+    <summary>Epcot Center</summary>
+    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+  </details>
+
+  <p><u>table,tr,th,td tags</u></p>
+  <table>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+  </table>
+
+
+  <p><u>svg tag</u></p>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    Sorry, your browser does not support inline SVG.
+  </svg>
+
+  <p><u>Template tag</u></p>
+  <p>Click the button below to display the hidden content from the template element.</p>
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <h2>Flower</h2>
+  <img src="img_white_flower.jpg" width="214" height="204">
+</template>
+
+<script>
+function showContent() {
+  let temp = document.getElementsByTagName("template")[0];
+  let clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+
+
+<p><u>text area tag</u></p>
+<form action="/action_page.php">
+  <p><label for="w3review">Review of CloudstackAcademy:</label></p>
+  <textarea id="w3review" name="w3review" rows="4" cols="50">At CloudstackAcademy.com, you will learn how to make a website. They offer free tutorials in all web development technologies.</textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+<p><u>tfoot tag</u></p>
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
+</body>
+</html>
